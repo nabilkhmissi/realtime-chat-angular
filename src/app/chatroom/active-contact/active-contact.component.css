@@ -1,0 +1,24 @@
+.active-contact-wrapper {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.material-icons-outlined {
+    font-size: 20px;
+    font-weight: 100;
+    vertical-align: middle;
+    padding: 7px 10px;
+    color: #fff;
+}
+
+.add-friend {
+    background-color: #4e426d;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.add-friend:hover {
+    cursor: pointer;
+    background-color: #695b8c;
+}

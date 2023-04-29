@@ -1,0 +1,42 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.174);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.content {
+    color: #4e426d;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+p {
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #4e426d;
+    border: 2px solid #4e426d;
+    margin-top: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+@media(max-width:792px) {
+    .content {
+        width: 90%;
+    }
+}

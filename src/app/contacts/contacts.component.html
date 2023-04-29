@@ -1,0 +1,17 @@
+<div class="sidebar-content">
+   <div class="search">
+      <input type="text" placeholder="Search a friend..." [formControl]="search">
+      <i class="bx bx-search"></i>
+      <ul class="search-results" *ngIf="showSearchResults">
+         <li *ngFor="let user of usersFound$" (click)="selectUser(user)"> {{ user.name }}</li>
+
+      </ul>
+   </div>
+   <ul class="contacts" *ngIf="friends$ | async as users">
+      <li *ngFor="let user of users" (click)="selectUser(user)"
+         [ngClass]="{'selectedUser' : selectedUser?._id === user._id}">
+         <i class="bx bx-user"></i>
+         {{ user.name }}
+      </li>
+   </ul>
+</div>

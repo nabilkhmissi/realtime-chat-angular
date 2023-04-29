@@ -1,0 +1,3 @@
+<app-loading *ngIf="loading$ | async"></app-loading>
+<app-notification *ngIf="notifications$ | async as notification" [notification]="notification"></app-notification>
+<router-outlet></router-outlet>

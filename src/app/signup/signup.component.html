@@ -1,0 +1,25 @@
+<div class="login-container">
+    <div class="form">
+        <h1>Signup</h1>
+        <form [formGroup]="signupForm" (submit)="signup()">
+            <div class="form-groupe">
+                <label>Name</label>
+                <input type="text" formControlName="name">
+            </div>
+            <div class="form-groupe">
+                <label>Username</label>
+                <input type="text" formControlName="username">
+            </div>
+            <div class="form-groupe">
+                <label>password</label>
+                <input type="password" formControlName="password">
+            </div>
+            <div class="form-groupe">
+                <div class="buttons">
+                    <button type="submit">Signup</button>
+                    <a class="signup" [routerLink]="['/login']">Login</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

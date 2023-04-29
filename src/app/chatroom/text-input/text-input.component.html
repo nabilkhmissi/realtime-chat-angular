@@ -1,0 +1,4 @@
+<div class="text-input-wrapper" *ngIf="joinedRoom">
+    <input type="text" placeholder="Type somehting" (keyup.enter)="sendMessage()" [formControl]="message">
+    <button> <i class="bx bxs-send" (click)="sendMessage()"></i></button>
+</div>

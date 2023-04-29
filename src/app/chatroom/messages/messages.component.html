@@ -1,0 +1,16 @@
+<ul>
+    <li class="message " *ngFor="let message of messages"
+        [ngClass]="{'owner' : (activeUser$ | async)._id === message.sender._id,'partner' : (activeUser$ | async)._id !== message.sender._id}">
+        <div class="message-date">
+            {{ message.creationDate }}
+        </div>
+        <div class="message-content">
+            {{ message.content }}
+        </div>
+    </li>
+    <li class="message partner" style="margin-top: 20px;" *ngIf="(isTyping$ | async) as typing">
+        <div class="message-content" *ngIf="typing&&typing.typing&&typing.typer !== (activeUser$ | async)._id ">
+            Typing...
+        </div>
+    </li>
+</ul>

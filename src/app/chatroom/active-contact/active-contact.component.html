@@ -1,0 +1,29 @@
+<div class="active-contact-wrapper">
+    <div>
+        <div *ngIf="selectedUser$|async as selectedUser; else logo" class="active-contact-name">
+            <div>
+                {{ selectedUser.name }}
+            </div>
+            <div class="add-friend" (click)="addFriend()" *ngIf="!(isFriend$ | async)">
+                <span class="material-icons-outlined">
+                    person_add
+                </span>
+            </div>
+
+        </div>
+        <ng-template #logo>
+            <h3 class="logo">TalkyWalky</h3>
+        </ng-template>
+    </div>
+    <div class="search-btn">
+        <div class="search-btn-toggler" id="sidebar-toggler">
+            <i class="bx bx-search"></i>
+        </div>
+        <div class="active-user-name">
+            <span> {{ (authUser$ | async).name }} </span>
+        </div>
+        <div (click)="logout()" class="logout">
+            <i class="bx bx-power-off"></i>
+        </div>
+    </div>
+</div>
